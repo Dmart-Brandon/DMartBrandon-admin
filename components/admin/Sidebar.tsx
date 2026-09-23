@@ -13,7 +13,6 @@ import {
   Images,
   Star,
   Megaphone,
-  Tag,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -21,7 +20,6 @@ const menuItems = [
   { title: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
   { title: 'Categories', href: '/admin/categories', icon: FolderTree },
   { title: 'Products', href: '/admin/products', icon: Package },
-  { title: 'Bulk Pricing', href: '/admin/products/pricing', icon: Tag },
   { title: 'Orders', href: '/admin/orders', icon: ShoppingCart },
   { title: 'Carousel', href: '/admin/storefront/carousel', icon: Images },
   { title: 'Featured', href: '/admin/storefront/featured', icon: Star },
