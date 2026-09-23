@@ -281,7 +281,7 @@ export default function AnnouncementsPage() {
                 onChange={(e) =>
                   setForm((f) => ({ ...f, message: e.target.value }))
                 }
-                placeholder="Free delivery on orders above ₹2,000"
+                placeholder="Free delivery on orders above $2,000"
               />
               <p className="mt-1 text-xs text-muted-foreground tabular-nums">
                 {form.message.length} / 200 characters

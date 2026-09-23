@@ -160,7 +160,7 @@ export default function DashboardPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <StatsCard
                 title="Total Revenue"
-                value={`₹${(stats.totalRevenue ?? 0).toFixed(2)}`}
+                value={`$${(stats.totalRevenue ?? 0).toFixed(2)}`}
                 icon={DollarSign}
                 trend={{ value: 12.5, isPositive: true }}
                 iconColor="text-primary"
@@ -215,7 +215,7 @@ export default function DashboardPage() {
                             <TableCell>
                               <Badge className={getStatusColor(order.status)}>{order.status}</Badge>
                             </TableCell>
-                            <TableCell className="text-right font-medium">₹{(order.total ?? 0).toFixed(2)}</TableCell>
+                            <TableCell className="text-right font-medium">${(order.total ?? 0).toFixed(2)}</TableCell>
                           </TableRow>
                         ))}
                       </TableBody>
@@ -270,7 +270,7 @@ export default function DashboardPage() {
                       <div className="min-w-0">
                         <p className="font-medium text-foreground truncate">{product.name}</p>
                         <p className="text-sm text-muted-foreground">{product.categoryName}</p>
-                        <p className="text-sm font-semibold text-green-600">₹{(product.price ?? 0).toFixed(2)}</p>
+                        <p className="text-sm font-semibold text-green-600">${(product.price ?? 0).toFixed(2)}</p>
                       </div>
                     </div>
                   ))}

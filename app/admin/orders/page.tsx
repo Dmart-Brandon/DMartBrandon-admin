@@ -189,7 +189,7 @@ export default function OrdersPage() {
     {
       key: 'total',
       label: 'Total',
-      render: (order: Order) => <span className="font-semibold">₹{order.total.toFixed(2)}</span>,
+      render: (order: Order) => <span className="font-semibold">${order.total.toFixed(2)}</span>,
     },
     {
       key: 'status',
@@ -413,13 +413,13 @@ export default function OrdersPage() {
                           <TableRow key={item.id}>
                             <TableCell className="font-medium">{item.productName}</TableCell>
                             <TableCell>{item.quantity}</TableCell>
-                            <TableCell className="text-right">₹{item.price.toFixed(2)}</TableCell>
-                            <TableCell className="text-right">₹{(item.quantity * item.price).toFixed(2)}</TableCell>
+                            <TableCell className="text-right">${item.price.toFixed(2)}</TableCell>
+                            <TableCell className="text-right">${(item.quantity * item.price).toFixed(2)}</TableCell>
                           </TableRow>
                         ))}
                         <TableRow>
                           <TableCell colSpan={3} className="font-bold text-right">Total</TableCell>
-                          <TableCell className="text-right font-bold">₹{selectedOrder.total.toFixed(2)}</TableCell>
+                          <TableCell className="text-right font-bold">${selectedOrder.total.toFixed(2)}</TableCell>
                         </TableRow>
                       </TableBody>
                     </Table>

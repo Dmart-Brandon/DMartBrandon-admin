@@ -211,7 +211,7 @@ export default function ProductsPage() {
     {
       key: 'price',
       label: 'Price',
-      render: (product: Product) => `₹${product.price.toFixed(2)}`,
+      render: (product: Product) => `$${product.price.toFixed(2)}`,
     },
     {
       key: 'stock',

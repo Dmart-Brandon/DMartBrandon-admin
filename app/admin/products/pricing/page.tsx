@@ -238,7 +238,7 @@ export default function BulkPricingPage() {
                     <div className="min-w-0 flex-1">
                       <p className="truncate font-semibold">{p.name}</p>
                       <p className="text-xs text-muted-foreground">
-                        {p.categoryName ?? '—'} · base ₹{p.price}/{p.unit}
+                        {p.categoryName ?? '—'} · base ${p.price.toFixed(2)}/{p.unit}
                       </p>
                     </div>
                     <div className="flex items-center gap-2">
@@ -373,7 +373,7 @@ export default function BulkPricingPage() {
                               </div>
                               <div className="flex items-center gap-1.5">
                                 <span className="text-xs text-muted-foreground">
-                                  ₹
+                                  $
                                 </span>
                                 <Input
                                   type="number"

@@ -49,18 +49,6 @@ export interface Product {
   createdAt: string;
 }
 
-export interface TaxBreakdown {
-  subtotal: number;
-  cgst: number;
-  sgst: number;
-  igst: number;
-  total: number;
-  rate: number;
-  isInterState: boolean;
-  sellerState: string;
-  buyerState: string;
-}
-
 export interface Order {
   id: string;
   orderNumber: string;
@@ -72,9 +60,7 @@ export interface Order {
   notes?: string;
   items: OrderItem[];
   shippingAddress?: ShippingAddress;
-  gstin?: string;
   businessName?: string;
-  taxBreakdown?: TaxBreakdown;
   paymentStatus?: 'pending' | 'paid' | 'failed';
   createdAt: string;
 }
@@ -144,28 +130,3 @@ export interface Announcement {
   updatedAt?: string;
 }
 
-export interface BusinessProfile {
-  id: string;
-  userId: string;
-  businessName: string;
-  gstins: { gstin: string; label: string; isDefault: boolean }[];
-  createdAt?: string;
-  updatedAt?: string;
-}
-
-export interface QuoteRequest {
-  id: string;
-  userId?: string;
-  customerName: string;
-  customerEmail: string;
-  customerPhone?: string;
-  businessName?: string;
-  gstin?: string;
-  items: { productId: string; productName: string; quantity: number; price: number; unit?: string }[];
-  cartTotal: number;
-  expectedFrequency?: string;
-  notes?: string;
-  status: 'new' | 'responded' | 'closed';
-  createdAt?: string;
-  updatedAt?: string;
-}

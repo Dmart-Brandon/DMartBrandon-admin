@@ -14,7 +14,6 @@ import {
   Star,
   Megaphone,
   Tag,
-  FileText,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -24,7 +23,6 @@ const menuItems = [
   { title: 'Products', href: '/admin/products', icon: Package },
   { title: 'Bulk Pricing', href: '/admin/products/pricing', icon: Tag },
   { title: 'Orders', href: '/admin/orders', icon: ShoppingCart },
-  { title: 'Quotes', href: '/admin/quotes', icon: FileText },
   { title: 'Carousel', href: '/admin/storefront/carousel', icon: Images },
   { title: 'Featured', href: '/admin/storefront/featured', icon: Star },
   { title: 'Announcements', href: '/admin/storefront/announcements', icon: Megaphone },

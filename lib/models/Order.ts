@@ -22,21 +22,6 @@ const OrderItemSchema = new mongoose.Schema(
   }
 );
 
-const TaxBreakdownSchema = new mongoose.Schema(
-  {
-    subtotal: { type: Number, default: 0 },
-    cgst: { type: Number, default: 0 },
-    sgst: { type: Number, default: 0 },
-    igst: { type: Number, default: 0 },
-    total: { type: Number, default: 0 },
-    rate: { type: Number, default: 0 },
-    isInterState: { type: Boolean, default: false },
-    sellerState: { type: String, default: 'TS' },
-    buyerState: { type: String, default: '' },
-  },
-  { _id: false }
-);
-
 const OrderSchema = new mongoose.Schema(
   {
     orderNumber: { type: String, required: true, unique: true },
@@ -61,9 +46,7 @@ const OrderSchema = new mongoose.Schema(
       zipCode: { type: String, default: '' },
       country: { type: String, default: 'India' },
     },
-    gstin: { type: String, default: '' },
     businessName: { type: String, default: '' },
-    taxBreakdown: { type: TaxBreakdownSchema, default: undefined },
     paymentStatus: {
       type: String,
       enum: ['pending', 'paid', 'failed'],

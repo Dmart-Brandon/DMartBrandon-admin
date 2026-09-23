@@ -162,7 +162,7 @@ export default function FeaturedPage() {
                       <div className="min-w-0 flex-1">
                         <p className="truncate text-sm font-medium">{p.name}</p>
                         <p className="truncate text-xs text-muted-foreground">
-                          {p.categoryName ?? '—'} · ₹{p.price}
+                          {p.categoryName ?? '—'} · ${p.price.toFixed(2)}
                         </p>
                       </div>
                       <Button
@@ -219,7 +219,7 @@ export default function FeaturedPage() {
                         <div className="min-w-0 flex-1">
                           <p className="truncate text-sm font-medium">{p.name}</p>
                           <p className="truncate text-xs text-muted-foreground">
-                            {p.categoryName ?? '—'} · ₹{p.price}
+                            {p.categoryName ?? '—'} · ${p.price.toFixed(2)}
                           </p>
                         </div>
                         <Button

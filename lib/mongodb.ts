@@ -22,7 +22,7 @@ export async function connectToDatabase() {
 
   if (!cached.promise) {
     cached.promise = mongoose
-      .connect(MONGO_URI as string, { dbName: 'hudi' })
+      .connect(MONGO_URI as string, { dbName: 'dmart' })
       .catch((err) => {
         cached.promise = null; // allow retry on next call
         throw err;

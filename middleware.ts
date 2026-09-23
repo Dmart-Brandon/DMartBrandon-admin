@@ -1,14 +1,11 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
-const isProtectedRoute = createRouteMatcher([
-  '/admin/dashboard(.*)',
-  '/admin/products(.*)',
-  '/admin/categories(.*)',
-  '/admin/orders(.*)',
-]);
+// Everything is protected except the login page. The API routes had no auth of
+// their own, so they must be covered here.
+const isPublicRoute = createRouteMatcher(['/admin/login(.*)']);
 
 export default clerkMiddleware(async (auth, req) => {
-  if (isProtectedRoute(req)) {
+  if (!isPublicRoute(req)) {
     await auth.protect();
   }
 });
